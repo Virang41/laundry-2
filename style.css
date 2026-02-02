@@ -80,7 +80,8 @@ ul {
 
 .loginbtn {
     background: var(--mainblue);
-    color: varnone;
+    color: var(--wht);
+    border: none;
     padding: 0.6rem 1.4rem;
     border-radius: 8px;
     font-weight: 500;
@@ -492,7 +493,7 @@ ul {
     font-weight: 500;
 }
 
-/* benefits area */
+/* benefits area - quality section */
 .benefitssec {
     padding: 4rem 2rem;
     background: var(--wht);
@@ -551,7 +552,7 @@ ul {
     line-height: 1.6;
 }
 
-/* email signup */
+/* newsletter section */
 .emailsec {
     background: linear-gradient(135deg, var(--mainblue), var(--darkblue));
     padding: 4rem 2rem;
