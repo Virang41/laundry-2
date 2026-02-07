@@ -1,570 +1,304 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-
+<html>
 
 <head>
-
-    <title>Laundry Service - Best in Town</title>
-
+    <title>Laundry Servic</title>
     <link rel="stylesheet" href="style.css">
 
+    <!-- icons ke liye ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- email js use kar raha hu form ke liye -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+
+
 </head>
-
-
 
 <body>
 
 
 
-    <nav class="topnav" id="home">
 
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="vk" id="home">
         <div class="navwrap">
 
-            <div class="brandlogo">🧺 WashKaro</div>
+            <!-- brand / logo -->
+            <div class="brandlogo">WashKaro</div>
 
             <ul class="menulinks">
-
                 <li><a href="#home">Home</a></li>
-
-                <li><a href="#ourservices">Our Services</a></li>
-
-                <li><a href="#whyus">Why Us</a></li>
-
-                <li><a href="#contactsec">Get in Touch</a></li>
-
+                <!-- id missing hai but scroll js handle kar lega -->
+                <li><a href="ourservices">Our Services</a></li>
+                <li><a href="contactsec">Get in Touch</a></li>
             </ul>
 
+            <!-- login abhi kaam nahi karta -->
             <button class="loginbtn">Login</button>
-
         </div>
-
     </nav>
 
-
-
+    <!-- ================= HERO SECTION ================= -->
     <section class="mainbanner">
-
         <div class="bannerbox">
 
             <div class="leftside">
-
-                <h1>Get ur clothes fresh & clean with our
-
+                <h1>
+                    today special day for the wash in cloth !
                     <span class="blueclr">profesional laundry</span>
-
                 </h1>
 
-                <p>we offer best dry cleanng, wash fold services at affordabe pickup availble at ur doorstep
-
-                    anytime.</p>
-
-                <button class="orderbtn" onclick="scrollToServices()"><span>📅</span> Book Service Now</button>
-
+                <!-- niche js me function hai -->
+                <button class="orderbtn" onclick="scrollToServices()">
+                    <span></span> Book Service Now
+                </button>
             </div>
 
             <div class="rightside">
-
                 <div class="imgbox">
-
                     <img src="https://cdn3d.iconscout.com/3d/premium/thumb/laundry-3d-icon-download-in-png-blend-fbx-gltf-file-formats--clothes-washing-machine-clean-pack-household-icons-8530782.png"
-                        alt="washing machine img" class="mainimg">
-
+                        class="mainimg" alt="laundry icon">
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
-
-
+    <!-- ================= STATS ================= -->
     <section class="statsbar">
-
         <div class="statswrap">
-
             <h2>Our Track Record</h2>
 
             <div class="numbersbox">
-
                 <div class="numitem">
-
-                    <span class="bignum">15+</span>
-
+                    <span class="bignum">15</span>
                     <span class="numlabel">diffrent services</span>
-
                 </div>
 
                 <div class="numitem">
-
-                    <span class="bignum">280+</span>
-
+                    <span class="bignum">280</span>
                     <span class="numlabel">happy clients</span>
-
                 </div>
 
                 <div class="numitem">
-
-                    <span class="bignum">5+</span>
-
+                    <span class="bignum">5</span>
                     <span class="numlabel">yrs experiance</span>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-
-
-
+    <!-- ================= SERVICES + CART ================= -->
     <section class="servicessec" id="ourservices">
-
         <div class="serviceswrap">
 
+            <!-- left side items -->
             <div class="serviceleft">
-
                 <h2>What We Offer</h2>
-
                 <p class="subtext">tap add button to put item cart</p>
-
                 <hr class="line">
-
-
 
                 <div class="itemslist">
 
-                    <div class="singleitem" data-id="1" data-name="dry clean" data-price="150">
-
+                    <div class="singleitem" data-id="1">
                         <div class="itemdetails">
-
-                            <span class="itemicon">🧼</span>
-
                             <span class="itemname">Dry Cleaning</span>
-
-                            <span class="dot">.</span>
-
+                            <span class="dot"></span>
                             <span class="itemprice">₹150</span>
-
                         </div>
 
-                        <button class="addbtn" onclick="addToCart(1,'Dry Cleaning',1500)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(1)">- Remove</button>
-
+                        <!-- js me price thoda alag hai -->
+                        <button class="addbtn" onclick="addToCart(1,'Dry Cleaning',1500)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(1)">-</button>
                     </div>
 
-
-
-                    <div class="singleitem" data-id="2" data-name="wash n fold" data-price="50">
-
+                    <div class="singleitem" data-id="2">
                         <div class="itemdetails">
-
-                            <span class="itemicon">🧹</span>
-
                             <span class="itemname">Wash & Fold</span>
-
-                            <span class="dot">.</span>
-
                             <span class="itemprice">₹50</span>
-
                         </div>
-
-                        <button class="addbtn" onclick="addToCart(2, 'Wash n Fold', 500)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(2)">- Remove</button>
-
+                        <button class="addbtn" onclick="addToCart(2,'Wash n Fold',500)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(2)">-</button>
                     </div>
 
-                    <div class="singleitem" data-id="3" data-name="iron" data-price="78">
-
+                    <div class="singleitem" data-id="3">
                         <div class="itemdetails">
-
-                            <span class="itemicon">🥼</span>
-
                             <span class="itemname">Ironing</span>
-
-                            <span class="dot">.</span>
-
                             <span class="itemprice">₹78</span>
-
                         </div>
-
-                        <button class="addbtn" onclick="addToCart(3, 'Iron Service', 78)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(3)">- Remove</button>
-
+                        <button class="addbtn" onclick="addToCart(3,'Iron Service',78)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(3)">-</button>
                     </div>
 
-                    <div class="singleitem" data-id="4" data-name="stain remove" data-price="289">
-
+                    <div class="singleitem" data-id="4">
                         <div class="itemdetails">
-
-                            <span class="itemicon">⭐</span>
-
                             <span class="itemname">Stain Remover</span>
-
-                            <span class="dot">.</span>
-
                             <span class="itemprice">₹289</span>
-
                         </div>
-
-                        <button class="addbtn" onclick="addToCart(4, 'Stain Removal', 2809)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(4)">- Remove</button>
-
+                        <button class="addbtn" onclick="addToCart(4,'Stain Removal',2809)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(4)">-</button>
                     </div>
 
-                    <div class="singleitem" data-id="5" data-name="lether clean" data-price="990">
-
+                    <div class="singleitem" data-id="5">
                         <div class="itemdetails">
-
-                            <span class="itemicon">👜</span>
-
-                            <span class="itemname">Lether & Bag</span>
-
-                            <span class="dot">.</span>
-
+                            <span class="itemname">Bag</span>
                             <span class="itemprice">₹990</span>
-
                         </div>
-
-                        <button class="addbtn" onclick="addToCart(5, 'Lether Cleaning', 990)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(5)">- Remove</button>
-
+                        <button class="addbtn" onclick="addToCart(5,'Lether Cleaning',990)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(5)">-</button>
                     </div>
 
-                    <div class="singleitem" data-id="6" data-name="wedding wear" data-price="280">
-
+                    <div class="singleitem" data-id="6">
                         <div class="itemdetails">
-
-                            <span class="itemicon">👗</span>
-
                             <span class="itemname">Bridal Dress</span>
-
-                            <span class="dot">.</span>
-
                             <span class="itemprice">₹280</span>
-
                         </div>
-
-                        <button class="addbtn" onclick="addToCart(6, 'Weddghing Dress', 280)">+ Add</button>
-
-                        <button class="removebtn hidden" onclick="removeFromCart(6)">- Remove</button>
-
+                        <button class="addbtn" onclick="addToCart(6,'Weddghing Dress',280)">+</button>
+                        <button class="removebtn hidden" onclick="removeFromCart(6)">-</button>
                     </div>
 
                 </div>
 
-                <p class="helptext">add items then fill form to book</p>
-
+                <p class="helptext">add item</p>
             </div>
 
-
-
+            <!-- right side cart + form -->
             <div class="serviceright">
 
                 <div class="cartbox">
-
                     <h3>Your Cart</h3>
 
                     <div class="cartheader">
-
                         <span>No.</span>
-
                         <span>Item</span>
-
                         <span>Qty</span>
-
                         <span>Rate</span>
-
                     </div>
 
                     <div class="cartlist" id="cartItems">
-
                         <div class="emptymsg" id="emptyCartMhessage">
-
-                            <span class="emptyicon">🛒</span>
-
-                            <p>cart is emty</p>
-
+                            <span class="emptyicon"></span>
+                            <p>cart is low</p>
                         </div>
-
                     </div>
 
                     <div class="totalrow">
-
-                        <span>Grand Total</span>
-
-                        <span id="totalAmount">₹0</span>
-
+                        <span>Total</span>
+                        <span id="totalAmount"></span>
                     </div>
 
-                    <p class="errmsg hidden" id="cartErrorMessage">plz add atleast 1 item first!</p>
-
+                    <p class="errmsg hidden" id="cartErrorMessage">
+                        add one altlest
+                    </p>
                 </div>
 
-
-
+                <!-- booking form -->
                 <div class="formbox">
-
                     <h3>Fill Details</h3>
 
                     <form id="bookingForm">
-
                         <div class="inputgrp">
-
-                            <label>Full Name</label>
-
+                            <label>Name</label>
                             <input type="text" id="fullName" placeholder="enter ur name">
-
                         </div>
 
                         <div class="twofields">
-
                             <div class="inputgrp">
-
                                 <label>Email</label>
-
                                 <input type="email" id="email" placeholder="ur email">
-
                             </div>
-
                             <div class="inputgrp">
-
                                 <label>Mobile No</label>
-
                                 <input type="tel" id="phone" placeholder="phone num">
-
                             </div>
-
                         </div>
 
-                        <p class="errmsg hidden" id="formErrorMessage">fill all feilds properly!</p>
+                        <p class="errmsg hidden" id="formErrorMessage">
+                            fill all feilds properly!
+                        </p>
 
                         <button type="submit" class="submitbtn">Book Now</button>
 
-
-
                         <div class="successbox hidden" id="successMessage">
-
-                            <p>🎉 Thank you For Booking the Service We will get back to you soon!</p>
-
+                            <p>thank for this booking</p>
                         </div>
-
                     </form>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
 
-
-
-    <section class="benefitssec" id="whyus">
-
-        <div class="benefitstop">
-
-            <h2>Why Pick Us?</h2>
-
-            <p>we r diffrent from others heres why</p>
-
-        </div>
-
-        <div class="benefitsgrid">
-
-            <div class="benefitcard">
-
-                <div class="cardicon"><span>👔</span></div>
-
-                <h4>Top Notch Quality</h4>
-
-                <p>ur cloths get premiumm treatmnt with us. we use best detergent and machins for perfect clening.</p>
-
-            </div>
-
-
-
-            <div class="benefitcard">
-
-                <div class="cardicon"><span>💬</span></div>
-
-                <h4>24x7 Helpline</h4>
-
-                <p>got any problm? call us anyt our team responds quickly to solv ur issues fast.</p>
-
-            </div>
-
-
-
-            <div class="benefitcard">
-
-                <div class="cardicon"><span>🚚</span></div>
-
-                <h4>Home Pickup</h4>
-
-                <p>no need to step out. we come pichs from ur house and delivr them back clean.</p>
-
-            </div>
-
-
-
-            <div class="benefitcard">
-
-                <div class="cardicon"><span>💰</span></div>
-
-                <h4>Pocket Friendly</h4>
-
-                <p>good quality doesnt mean exppricng is very resonable for everybdy.</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <section class="emailsec" id="newsletter">
-
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="emailsec">
         <div class="emailwrap">
-
-            <div class="emailleft">
-
-                <h2>Join Our Mailing List</h2>
-
-                <p>get notifyd about offers discounts an new servics we launch!</p>
-
+            <div>
+                <h2>follow service</h2>
+                <p>provide email in our service</p>
             </div>
 
             <div class="emailform">
-
                 <input type="text" placeholder="Full Name" id="newsletterName">
-
                 <input type="email" placeholder="Email Adress" id="newsletterEmail">
-
                 <button class="subbtn" onclick="subscribeNewsletter()">Subscribe</button>
-
             </div>
 
-            <p class="subsuccess hidden" id="newsletterSuccess">🎉 thanks for subscribng! u will recieve updates soon.
-
+            <p class="subsuccess hidden" id="newsletterSuccess">
+                thanks for subscribn u will recieve updates soon.
             </p>
-
         </div>
-
     </section>
 
-
-
+    <!-- ================= FOOTER ================= -->
     <footer class="bottomfooter" id="contactsec">
-
         <div class="footerwrap">
 
-            <div class="footcol">
-
-                <h3 class="footlogo">🧺 WashKaro</h3>
-
-                <p class="abtitle">About Us</p>
-
-                <p class="abtext">we are a local laundry busines runnig since 5 yrs our goal is providng best cloth
-
-                    care at fair prces. trusted by hundreads of cus surat area.</p>
-
+            <div>
+                <h1>Wash</h1>
+                <p>this is a wash karo in just 5 minuts for th day and daily wash our clothes</p>
             </div>
 
             <div class="footcol">
-
                 <h4>Useful Links</h4>
-
                 <ul>
-
-                    <li><a href="#whyus">About</a></li>
-
-                    <li><a href="#contactsec">Contact</a></li>
-
-                    <li><a href="#">Privacy</a></li>
-
-                    <li><a href="#">Terms</a></li>
-
-                    <li><a href="#">FAQ</a></li>
-
-                    <li><a href="#">Refunds</a></li>
-
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Privacy</li>
                 </ul>
-
             </div>
 
-
-
-            <div class="footcol">
-
-                <h4>Reach Us</h4>
-
+            <div>
+                <h4>visit</h4>
                 <p><ion-icon name="mail-outline"></ion-icon> vimesta@gmail.com</p>
-
                 <p><ion-icon name="call-outline"></ion-icon> +91 9876543210</p>
-
                 <p><ion-icon name="location-outline"></ion-icon> Surat, Gujarat</p>
-
             </div>
 
-
-
-            <div class="footcol">
-
+            <div>
                 <h4>Connect With Us</h4>
-
                 <p class="socialtext">follow for updtes</p>
-
                 <div class="socialrow">
-
-                    <a href="#" class="soclink"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#" class="soclink"><ion-icon name="logo-facebook"></ion-icon></a>
-
-                    <a href="#" class="soclink"><ion-icon name="logo-twitter"></ion-icon></a>
-
-                    <a href="#" class="soclink"><ion-icon name="logo-linkedin"></ion-icon></a>
-
-                    <a href="#" class="soclink"><ion-icon name="logo-youtube"></ion-icon></a>
-
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
                 </div>
             </div>
 
         </div>
 
-        <div class="copyrightbar">
-
+        <div class="copyrihtbar">
             <p>© 2024 vimesta. all rights reservd.</p>
-
         </div>
-
     </footer>
 
-
-
+    <!-- main js file -->
     <script src="script.js"></script>
 
+
 </body>
-
-
 
 </html>
