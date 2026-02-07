@@ -41,7 +41,7 @@ ul {
 }
 
 /* top navigation */
-.topnav {
+.vk {
     background: var(--wht);
     padding: 1rem 2rem;
     position: sticky;
@@ -197,7 +197,7 @@ ul {
     opacity: 0.9;
 }
 
-/* services area */
+
 .servicessec {
     padding: 4rem 2rem;
     background: var(--lightgray);
